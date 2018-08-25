@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <default revision="master" sync-j="4"/>
+
+  <remote fetch="http://git.yoctoproject.org/git" name="yocto"/>
+  <remote fetch="git://git.openembedded.org" name="oe"/>
+  <remote fetch="https://github.com" name="github"/>
+  <remote fetch="http://git.linaro.org" name="linaro"/>
+  <remote fetch="http://git.shr-project.org" name="shr"/>
+
+  <project remote="github" name="openembedded/openembedded-core" path="layers/openembedded-core"/>
+  <project remote="github" name="piroflip/meta-hypper" path="layers/meta-hypper">
+      <copyfile dest="setup-environment" src="../../.repo/manifests/setup-environment"/>
+  </project>
+
+  <project remote="yocto" name="meta-intel" path="layers/meta-intel"/>
+
+</manifest>
